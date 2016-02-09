@@ -1,5 +1,5 @@
 /*
-@Sm0k3Scr33n 
+Adafr
 
 
 
@@ -144,13 +144,32 @@ void loop()
     } 
   
 */
-\
-
-
-
-
-
-
+int colorcount = 0;
+while (colorcount<5){
+  int delays=2;
+  int r = 255; int b = 0;int count =0;int g=0;
+  while (count<255 ){
+  setColor(r, g, b);  setColor2(r, g, b);
+  g++;r=r-1;delay(delays);count++;
+     
+    }
+    
+     r = 0;  b = 0; count =0; g=255;
+  while (count<255 ){
+  setColor(r, g, b);  setColor2(r, g, b);
+  b++;g=g-1;delay(delays);count++;
+     
+    }
+    r = 0; b = 255;count =0; g=0;
+ while (count<255 ){
+  setColor(r, g, b);  setColor2(r, g, b);
+  r++;b=b-1;delay(delays);count++;
+     setColor(255, 0, 0);  // red
+ 
+    }    
+colorcount++;}
+    
+}
  
 void setColor(int red, int green, int blue)
 {
